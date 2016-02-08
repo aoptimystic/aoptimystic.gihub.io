@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a Security Engineer at a major semiconductor company where I spend my time in trying to secure clouds and harden the earth. When not coding, I enjoy reading the works of PG Wodehouse or flying sea planes.  
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Check out quantumofserendipity.blogspot.com for some laughs. You're Welcome! :) 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[srk@vevanesca.com](mailto:email@domain.com)
