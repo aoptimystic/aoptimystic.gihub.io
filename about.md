@@ -8,7 +8,7 @@ I'm a Security Engineer at a major semiconductor company where I spend my time i
 
 ### More Information
 
-Check <a href="quantumofserendipity.blogspot.com">this</a> for some laughs. You're Welcome! :) 
+Check <a href="quantumofserendipity.blogspot.com">this</a> out for some laughs. You're Welcome! :) 
 
 ### Contact me
 
