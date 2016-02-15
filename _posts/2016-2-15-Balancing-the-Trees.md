@@ -61,5 +61,29 @@ With this, our earlier BST now looks like :
             
 A close observation yields that the tree is sorted. Closer observation tells us that its inorder traversal of the original BST. So, as I had said before, you can avoid doing these rotations in place if you have the liberty of having a separate list. The complexity in time wouldn't change. 
 
-        Step 2. Construct a Complete Binary Tree
-        
+        Step 2. Complete Binary Tree
+
+Now time for some action! This step will convert our rchild list into a complete (balanced Binary tree). The assumption here is that the middle element will be root (more often than not, this is the case anyway :) ) and this is where we digress from the actual DSW. So we recursively call the routine that returns the middle element of the list a root and creates a left subtree out of its predecessors, right subtree from its successors. This process goes on until only one element remains and we return that as a lonely sub-root (or as its better known, the leaf node) 
+
+Here, to make things a bit easier, I'm using an ArrayList to store the elements and passing it with 0 and size as parameters when I call it in the calling function. 
+
+{% highlight java %}
+private Node rockNRoll(ArrayList<Integer> temp,int start,int end){
+  if(start > end){
+    return null;
+  }
+  int mid = start+(end - start)/2;
+  Node MidNode = new Node(temp.get(mid));
+
+  MidNode.lchild = rockNRoll(temp,start,mid-1);
+  MidNode.rchild = rockNRoll(temp,mid+1,end);
+  return MidNode;
+}
+{% endhighlight %}
+
+After all this effort, the result? This!
+
+<img src={{ site.url }}/images/BinaryTree2.png align="middle">
+
+Doesn't it look awesome, or what! Now we not just have a BST, but a balanced, efficient BST that's takes the cake, icing and the gift :) 
+
