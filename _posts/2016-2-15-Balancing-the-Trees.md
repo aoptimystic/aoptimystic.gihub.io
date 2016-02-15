@@ -11,11 +11,11 @@ Consider this case: Lets say you have the following inputs while creating a tree
 
 So if we go by the typical BST construction approach, our tree might look like this : 
 
-              <img src={{ site.url }}/images/BinaryTree1.png align="middle">
+  <img src={{ site.url }}/images/BinaryTree1.png align="middle">
 
 If we later want to search for 133, we have to traverse the whole tree until we hit 134, and then take left. Number of comparisons? 6. 
 Now, if our tree was only like this :
 
-              <img src={{ site.url }}/images/BinaryTree2.png align="middle">
+  <img src={{ site.url }}/images/BinaryTree2.png align="middle">
               
             
