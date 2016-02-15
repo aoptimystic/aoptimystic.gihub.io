@@ -27,8 +27,8 @@ The method is very similar to DSW Algorithm (Day, Stout and Warren). I have borr
 We have a tree. Good. A BST.Great! What can make our life even better? Why, a linked list of course! So there are two ways to go about it. One, we can print out the inorder traversal of BST and add the elements to a List. Else, we can do it programatically by rotating every lchild we come across to make the BST highly skewed until no node has any lchild present but only the rchildren remain. Something like this : 
 
 <img src={{ site.url }}/images/BinaryTree3.gif align="middle">
+Image credit: <a href ="http://penguin.ewu.edu/~trolfe/DSWpaper/">here</a>  
 
-[Image credit: <a href ="http://penguin.ewu.edu/~trolfe/DSWpaper/"> here</a>] 
 So the code looks like :-
 
 {% highlight java %}
@@ -52,7 +52,14 @@ public void balanceIt(){
    iterator2 = iterator2.rchild;
    iterator1 = iterator1.rchild;
   }
-
+  this.root = PSEUDO.rchild;
 }
 {% endhighlight %}
+
+With this, our earlier BST now looks like :
+<img src={{ site.url }}/images/BinaryTree4.png align="middle">
             
+A close observation yields that the tree is sorted. Closer observation tells us that its inorder traversal of the original BST. So, as I had said before, you can avoid doing these rotations in place if you have the liberty of having a separate list. The complexity in time wouldn't change. 
+
+        Step 2. Construct a Complete Binary Tree
+        
