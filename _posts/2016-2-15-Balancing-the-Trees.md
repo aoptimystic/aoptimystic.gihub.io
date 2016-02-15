@@ -28,4 +28,32 @@ We have a tree. Good. A BST.Great! What can make our life even better? Why, a li
 
 <img src={{ site.url }}/images/BinaryTree3.gif align="middle">
 
+[Image credit: http://penguin.ewu.edu/~trolfe/DSWpaper/] 
+So the code looks like :-
+
+{% highlight java %}
+public void balanceIt(){
+//Create a Pseudo root first
+  Node PSEUDO = new Node(0);
+  PSEUDO.rchild = this.root;
+
+  Node iterator1 = PSEUDO.rchild;
+  Node iterator2 = PSEUDO;
+  while(iterator1 != null){
+
+  if(iterator1.lchild != null){
+  Node temp = iterator1.lchild;
+  iterator2.rchild = temp;
+  iterator1.lchild = temp.rchild;
+  temp.rchild = iterator1;
+  iterator1 = temp;
+  }
+ else{
+  iterator2 = iterator2.rchild;
+  iterator1 = iterator1.rchild;
+ }
+
+}
+
+{% endhighlight %}
             
