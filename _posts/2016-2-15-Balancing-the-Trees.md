@@ -40,20 +40,25 @@ public void balanceIt(){
   Node iterator1 = PSEUDO.rchild;
   Node iterator2 = PSEUDO;
   while(iterator1 != null){
-
-   if(iterator1.lchild != null){
-    Node temp = iterator1.lchild;
-    iterator2.rchild = temp;
-    iterator1.lchild = temp.rchild;
-    temp.rchild = iterator1;
-    iterator1 = temp;
-   }
-  else{
-   iterator2 = iterator2.rchild;
-   iterator1 = iterator1.rchild;
-  }
-  this.root = PSEUDO.rchild;
-}
+  /*
+  We keep iterating right until we reach a node having lchild.
+  When we do, we rotate that node and keep doing it until only
+  rchilds exist.
+  */
+  if(iterator1.lchild != null){
+     Node temp = iterator1.lchild;
+     iterator2.rchild = temp;
+     iterator1.lchild = temp.rchild;
+     temp.rchild = iterator1;
+     iterator1 = temp;
+  }    //If ends
+    else{
+     iterator2 = iterator2.rchild;
+     iterator1 = iterator1.rchild;
+  }   //Else ends
+ }   //While ends
+ this.root = PSEUDO.rchild;
+}  //balanceIt ends
 {% endhighlight %}
 
 With this, our earlier BST now looks like :
