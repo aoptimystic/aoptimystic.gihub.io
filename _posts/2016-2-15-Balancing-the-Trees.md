@@ -7,13 +7,13 @@ When I think of an easy and efficient way of searching keys, the first thing tha
 
 Consider this case: Lets say you have the following inputs while creating a tree :
 
-1,  5,  6,  45,  89,  134, 133. 
+1,  5,  6,  45,  89,  135, 134. 
 
 So if we go by the typical BST construction approach, our tree might look like this : 
 
   <img src={{ site.url }}/images/BinaryTree1.png align="middle">
 
-If we later want to search for 133, we have to traverse the whole tree until we hit 134, and then take left. Number of comparisons? 6. 
+If we later want to search for 134, we have to traverse the whole tree until we hit 135, and then take left. Number of comparisons? 6. 
 Now, if our tree was only like this :
 
   <img src={{ site.url }}/images/BinaryTree2.png align="middle">
